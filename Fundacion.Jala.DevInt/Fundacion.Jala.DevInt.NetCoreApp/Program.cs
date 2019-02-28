@@ -9,9 +9,9 @@ namespace Fundacion.Jala.DevInt.NetCoreApp
     {
         static void Main(string[] args)
         {
-            ExplicitTypes();
+            //ExplicitTypes();
             //ImplicitTypes();
-            //SampleInmmutability();
+            SampleInmmutability();
             //SampleIterators();
         }
 
@@ -128,16 +128,16 @@ namespace Fundacion.Jala.DevInt.NetCoreApp
                 "Thursday",
                 "Friday"
             };
-            #region For loop
+            
             var workingDaysCopy = workingDays.Clone() as string[];
             for (int i = 0; i < workingDaysCopy.Length; i++)
             {
                 workingDaysCopy[i] = $"{workingDaysCopy[i]}-{i}";
                 Console.WriteLine(workingDaysCopy[i]);
             }
-            #endregion
+           
 
-            #region ForEach
+            #region Negative Tests
             foreach (var day in workingDays)
             {
                 if (!Enum.TryParse(typeof(WorkingDay), day, out var workingDay))

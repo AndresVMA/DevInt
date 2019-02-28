@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InputAdapter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Fundacion.Jala.DevInt.ConsoleApp.Shared\Fundacion.Jala.DevInt.ConsoleApp.Shared.csproj">
+      <Project>{87555bb2-f02c-4096-8c30-fdd148d8c062}</Project>
+      <Name>Fundacion.Jala.DevInt.ConsoleApp.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fundacion.Jala.DevInt.Shared.Models\Fundacion.Jala.DevInt.Shared.Models.csproj">
       <Project>{96640755-8daf-4b12-a13f-49eb28a93b5d}</Project>
       <Name>Fundacion.Jala.DevInt.Shared.Models</Name>

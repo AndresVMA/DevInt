@@ -6,11 +6,19 @@ namespace Fundacion.Jala.DevInt.NetFrameworkApp
     {
         static void Main(string[] args)
         {
-            var adapter = new InputAdapter(args);
-            var vectorA = adapter.VectorA;
-            var vectorB = adapter.VectorB;
-            var vectorResultDisplay = vectorA.Add(vectorB);
-            Console.WriteLine($"Result: {vectorResultDisplay.ToString()}");
+            try
+            {
+                var adapter = new InputAdapter(args);
+                var vectorA = adapter.VectorA;
+                var vectorB = adapter.VectorB;
+                var vectorResultDisplay = vectorA + vectorB;
+                Console.WriteLine($"Result: {vectorResultDisplay.ToString()}");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+           
         }
     }
 }

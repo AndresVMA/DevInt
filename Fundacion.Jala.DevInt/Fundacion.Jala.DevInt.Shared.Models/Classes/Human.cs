@@ -3,7 +3,7 @@
 namespace Fundacion.Jala.DevInt.Shared.Models.Classes
 {
     /// <summary>
-    /// Defines a Human being.
+    /// Defines a human being.
     /// </summary>
     public partial class Human
     {

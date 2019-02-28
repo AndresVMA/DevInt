@@ -1,9 +1,5 @@
 ﻿using Fundacion.Jala.DevInt.Shared.Models.Classes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fundacion.Jala.DevInt.NetFrameworkApp
 {
@@ -21,16 +17,14 @@ namespace Fundacion.Jala.DevInt.NetFrameworkApp
                 var argumentsA = args[0].Split(',');
                 var argumentsB = args[1].Split(',');
 
-                this.VectorA = new Vector2D(TryGetInteger(argumentsA[0]), TryGetInteger(argumentsA[1]));
-                this.VectorB = new Vector2D(TryGetInteger(argumentsB[0]), TryGetInteger(argumentsB[1]));
-                
+                this.VectorA = new Vector2D(TryGetFloat(argumentsA[0]), TryGetFloat(argumentsA[1]));
+                this.VectorB = new Vector2D(TryGetFloat(argumentsB[0]), TryGetFloat(argumentsB[1]));
             }
             else
             {
                 throw new ArgumentException(InvalidArgumentsMessage);
             }
         }
-
         private void ValidateVectorFormat(string[] arguments)
         {
             if (arguments.Length != 2)
@@ -39,9 +33,9 @@ namespace Fundacion.Jala.DevInt.NetFrameworkApp
             }
         }
 
-        private int TryGetInteger(string value)
+        private float TryGetFloat(string value)
         {
-            if (!int.TryParse(value, out var parsedValue))
+            if (!float.TryParse(value, out var parsedValue))
             {
                 throw new ArgumentException(InvalidNumberMessage);
             }
