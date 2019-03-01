@@ -9,9 +9,9 @@ namespace Fundacion.Jala.DevInt.NetCoreApp
     {
         static void Main(string[] args)
         {
-            //ExplicitTypes();
+            ExplicitTypes();
             //ImplicitTypes();
-            SampleInmmutability();
+            //SampleInmmutability();
             //SampleIterators();
         }
 

@@ -19,9 +19,14 @@
 
         public virtual void Jump()
         {
-
+            this.Energy--;
         }
 
+        public virtual void Jump(float height, float velocity = 1)
+        {
+            this.Jump();
+            this.position.Y += height;
+        }
         public virtual void Run()
         {
 

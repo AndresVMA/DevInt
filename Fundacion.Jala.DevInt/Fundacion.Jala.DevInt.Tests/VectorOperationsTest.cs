@@ -22,6 +22,8 @@ namespace Fundacion.Jala.DevInt.Tests
         {
             var vector1 = new Vector2D(2f, 5f);
             var vector2 = new Vector2D(3f, 6f);
+
+            //var dotProductResult = Vector2DExtensions.Dot(vector1, vector2);
             var dotProductResult = vector1.Dot(vector2);
             Assert.AreEqual(36, dotProductResult);
         }
