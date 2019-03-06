@@ -7,6 +7,7 @@ namespace Fundacion.Jala.DevInt.OOP.ConsoleApp
     {
         static void Main(string[] args)
         {
+            //OverrideVsNew();
             UpcastDownCast();
         }
 
@@ -48,7 +49,14 @@ namespace Fundacion.Jala.DevInt.OOP.ConsoleApp
             }
 
             decepticonBot?.DisplayPosition("DecepticonPosition");
+
+            var x = decepticonBot != null ? 2 : 1;
             var vehicle = humanoid as Autobot;
+            var decepticon = humanoid.Position ?? new Shared.Models.Classes.Point2D();
+            //var decepticon = humanoid != null ? humanoid :  new Decepticon();
+            if (humanoid is Decepticon decept)
+            {
+            }
             vehicle?.DisplayPosition("AutobotPosition");
 
         }
