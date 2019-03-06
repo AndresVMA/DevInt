@@ -54,9 +54,9 @@ namespace Fundacion.Jala.DevInt.NetCoreApp
             var greetingTranslate = "Live Long and Prosper";
             var bin1 = 1;
             var bin2 = 2;
-            var resultXor = bin1 | bin2;
+            var resultOr = bin1 | bin2;
             var independenceDay = new DateTime(1825, 8, 6);
-            Console.WriteLine("Xor Result:" + resultXor);
+            Console.WriteLine("Or Result:" + resultOr);
             Console.WriteLine(string.Format("positionX: {0}", positionX));
             Console.WriteLine("totalAmount: {0}", totalAmount);
             Console.WriteLine("Price Positive?: {0}, price: {1}, ", isPricePositive, price);
