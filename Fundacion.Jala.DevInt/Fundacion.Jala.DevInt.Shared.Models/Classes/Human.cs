@@ -12,7 +12,7 @@ namespace Fundacion.Jala.DevInt.Shared.Models.Classes
         {
             this.inventory = new List<Item>();
         }
-        public Point2D position;
+        Point2D position;
         private string _name;
         protected List<Item> inventory;
         /// <summary>
