@@ -51,6 +51,7 @@
     <Compile Include="Parts\PartSide.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transformer\ITransformer.cs" />
+    <Compile Include="VechicleBase.cs" />
     <Compile Include="Vehicles\IAirCraft.cs" />
     <Compile Include="Vehicles\IVehicle.cs" />
   </ItemGroup>

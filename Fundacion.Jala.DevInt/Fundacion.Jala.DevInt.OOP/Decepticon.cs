@@ -5,7 +5,7 @@ using Fundacion.Jala.DevInt.Shared.Models.Classes;
 
 namespace Fundacion.Jala.DevInt.OOP
 {
-    public class Decepticon : HumanoidBot, IAirCraft, ITransformer
+    public class Decepticon : HumanoidBot, IVehicle
     {
         private Engine _engine;
         private Point2D _position;

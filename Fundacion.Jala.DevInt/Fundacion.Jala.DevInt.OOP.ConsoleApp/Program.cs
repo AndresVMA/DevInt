@@ -7,8 +7,8 @@ namespace Fundacion.Jala.DevInt.OOP.ConsoleApp
     {
         static void Main(string[] args)
         {
-            //OverrideVsNew();
-            UpcastDownCast();
+            OverrideVsNew();
+            //UpcastDownCast();
         }
 
         static void OverrideVsNew()
@@ -20,29 +20,29 @@ namespace Fundacion.Jala.DevInt.OOP.ConsoleApp
             autobot.Run();
             autobot.DisplayPosition("After Run");
 
-            HumanoidBot humanoid = autobot;
-            humanoid.DisplayPosition("Humanoid Position");
-            humanoid.Walk();
-            autobot.DisplayPosition("After Walk");
-            humanoid.Run();
-            humanoid.DisplayPosition("After Run");
+            IVehicle vehicle = autobot;
+            vehicle.DisplayPosition("Vechicle Position");
+            vehicle.MoveForward();
+            vehicle.DisplayPosition("After Move Forward");
+            vehicle.MoveBackWard();
+            vehicle.DisplayPosition("After Move Backward");
         }
 
         static void UpcastDownCast()
         {
             var autobot = new Autobot();
-            HumanoidBot humanoid = autobot; // upcast
-            var transformer = (Autobot)humanoid; // downcast
+            IVehicle vechicle = autobot; // upcast
+            var transformer = (Autobot)vechicle; // downcast
             try
             {
-                var decepticon = (Decepticon)humanoid;
+                var decepticon = (Decepticon)vechicle;
             }
             catch (Exception e)
             {
                 Console.WriteLine("Exception casting");
             }
 
-            var decepticonBot = humanoid as Decepticon;
+            var decepticonBot = vechicle as Decepticon;
             if (decepticonBot != null)
             {
                 //do some logic
@@ -51,10 +51,10 @@ namespace Fundacion.Jala.DevInt.OOP.ConsoleApp
             decepticonBot?.DisplayPosition("DecepticonPosition");
 
             var x = decepticonBot != null ? 2 : 1;
-            var vehicle = humanoid as Autobot;
-            var decepticon2 = humanoid.Position ?? new Shared.Models.Classes.Point2D();
+            var vehicle = vechicle as Autobot;
+            var decepticon2 = vechicle.Position ?? new Shared.Models.Classes.Point2D();
             //var decepticon = humanoid != null ? humanoid :  new Decepticon();
-            if (humanoid is Decepticon decept)
+            if (vechicle is Decepticon decept)
             {
             }
             vehicle?.DisplayPosition("AutobotPosition");

@@ -1,29 +1,33 @@
 ﻿using Fundacion.Jala.DevInt.OOP.Parts;
 using Fundacion.Jala.DevInt.OOP.Transformer;
 using Fundacion.Jala.DevInt.OOP.Vehicles;
+using Fundacion.Jala.DevInt.Shared.Models.Classes;
 
 namespace Fundacion.Jala.DevInt.OOP
 {
-    public class Autobot : HumanoidBot, IVehicle, ITransformer
+    public class Autobot : VechicleBase, ITransformer
     {
+        private HumanoidBot _humanoid;
         private Engine _engine;
         public bool IsOnVehicleMode { get; private set; } = true;
         public Autobot()
         {
+            _humanoid = new HumanoidBot();
+            Position = _humanoid.Position;
             _engine = new Engine(1200);
 
         }
-        public void MoveBackWard() => this.Position.X -= 1;
+        public new void MoveBackWard() => Position.X -= 5;
 
-        public void MoveForward() => this.Position.X += 1;
+        public override void MoveForward() => Position.X += 5;
 
-        public void StartEngine() => _engine.Start();
+        public override void StartEngine() => _engine.Start();
 
-        public void StopEngine() => _engine.Stop();
+        public override void StopEngine() => _engine.Stop();
 
-        public override void Walk() => Position.X += 5;
+        public void Walk() => Position.X += 3;
 
-        public new void Run() => Position.X += 10;
+        public void Run() => Position.X += 4;
 
         public void Transform() => IsOnVehicleMode = !IsOnVehicleMode;
 

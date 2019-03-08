@@ -9,5 +9,19 @@
         {
             return $"({X},{Y})";
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Point2D point)
+            {
+                return X == point.X && Y == point.Y;
+            }
+            return false;
+        }
+
+        public Point2D Clone()
+        {
+            return MemberwiseClone() as Point2D;
+        }
     }
 }

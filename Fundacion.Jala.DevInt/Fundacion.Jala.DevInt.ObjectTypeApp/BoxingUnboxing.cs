@@ -11,7 +11,7 @@ namespace Fundacion.Jala.DevInt.ObjectTypeApp
             int size = 20;
             object wrapper = size;
             int wrapperValue = (int)wrapper;
-            double wrapDouble = (double)(int)wrapper;
+            double wrapDouble = (double)wrapper;
         }
 
         public static void SampleBoxingReferenceTypes()
@@ -24,11 +24,12 @@ namespace Fundacion.Jala.DevInt.ObjectTypeApp
             customForm.AddValue(new Point2D() { X = 10, Y = 7 });
             IVehicle autobot = new Autobot();
             customForm.AddValue(autobot);
+            float? nullable = null;
 
             object textField = customForm.GetValue(3);
             if (textField.GetType() == typeof(string))
             {
-                var textValue = (string)textField;
+                var textValue = textField as int?;
             }
         }
     }
