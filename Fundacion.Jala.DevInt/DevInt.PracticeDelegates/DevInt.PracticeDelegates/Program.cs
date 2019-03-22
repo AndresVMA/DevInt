@@ -4,6 +4,7 @@ namespace DevInt.PracticeDelegates
 {
     class Program
     {
+        delegate T Identity<T>(T argument);
         static void Main(string[] args)
         {
             Exercise1();
@@ -23,8 +24,15 @@ namespace DevInt.PracticeDelegates
         //Write a delegate called Identity that takes a generic argument returns that same argument.
         public static void Exercise1()
         {
+            Identity<int> identityFunc = IdentityFunction;
+            var result = identityFunc(5);
+            Console.WriteLine(result);
         }
 
+        static T IdentityFunction<T>(T argument)
+        {
+            return argument;
+        }
         // Exercise 2
         // Write a delegate called Nullable that takes a generic argument of reference type and set that argument to null 
         public static void Exercise2()
