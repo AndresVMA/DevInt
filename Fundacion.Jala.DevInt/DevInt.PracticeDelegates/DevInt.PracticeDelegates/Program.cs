@@ -15,6 +15,10 @@ namespace DevInt.PracticeDelegates
             Exercise7();
         }
 
+        /**
+         * For each exercise print the result in the console.
+         * */
+
         // Exercise 1
         //Write a delegate called Identity that takes a generic argument returns that same argument.
         public static void Exercise1()
@@ -22,7 +26,7 @@ namespace DevInt.PracticeDelegates
         }
 
         // Exercise 2
-        // Write a delegate called Nullable that takes a generic argument and set the argument to null 
+        // Write a delegate called Nullable that takes a generic argument of reference type and set that argument to null 
         public static void Exercise2()
         {
 
@@ -30,7 +34,8 @@ namespace DevInt.PracticeDelegates
 
         // Exercise 3
         // Write a delegate called Operation and three binary functions Add, Substract and Multiply
-        // that takes to decimal numbers and return their sum, difference and product.
+        // that takes two decimal numbers and return their sum, difference and product.
+        // call the three funcions with a single delegate instance.
         public static void Exercise3()
         {
 
@@ -45,7 +50,7 @@ namespace DevInt.PracticeDelegates
         }
 
         // Exercise 5
-        // Write a delegate that adds from two invocations
+        // Write a delegate that adds two decimals numbers from two invocations
         // e.g AddF(3)(4)
         // result should be = 7
         public static void Exercise5()
@@ -73,5 +78,9 @@ namespace DevInt.PracticeDelegates
         {
 
         }
+
+        /**
+        * Send the Program.cs compressed on a file with your DelegatesNameLastName.zip
+        * */
     }
 }

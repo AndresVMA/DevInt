@@ -8,7 +8,6 @@ namespace Fundacion.Jala.DevInt.GenericsSample
     {
         public EBook(int pages) : base(pages)
         {
-
         }
     }
 }

@@ -2,29 +2,33 @@
 
 namespace Fundacion.Jala.DevInt.GenericsSample
 {
-    public class IntStack
+    public struct DataDisplay
     {
-        private int[] _stack;
+
+    }
+    public class CustomStack<T>  : IPushable<T>, IPopable<T>
+    {
+        private T[] _stack;
         private int _currentPosition;
-        public IntStack()
+        public CustomStack()
         {
             _currentPosition = 0;
-            _stack = new int[100];
+            _stack = new T[100];
         }
 
-        public void Push(int value)
+        public void Push(T value)
         {
             _stack[_currentPosition] = value;
             _currentPosition++;
         }
 
-        public int Pop()
+        public T Pop()
         {
             if (_currentPosition >= 0)
             {
                 return _stack[--_currentPosition];
             }
-            return 0;
+            return default(T);
         }
     }
 }
