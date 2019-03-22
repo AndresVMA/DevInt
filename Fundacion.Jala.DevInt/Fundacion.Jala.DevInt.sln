@@ -41,6 +41,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week5", "Week5", "{CA4B82C4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevInt.PracticeDelegates", "DevInt.PracticeDelegates\DevInt.PracticeDelegates\DevInt.PracticeDelegates.csproj", "{C104D301-627D-4A08-AE18-87DA6724D599}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevInt.MoreDelegates", "DevInt.MoreDelegates\DevInt.MoreDelegates.csproj", "{C217084F-FB7F-4A08-8024-B577A10F6121}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,10 @@ Global
 		{C104D301-627D-4A08-AE18-87DA6724D599}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C104D301-627D-4A08-AE18-87DA6724D599}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C104D301-627D-4A08-AE18-87DA6724D599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C217084F-FB7F-4A08-8024-B577A10F6121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C217084F-FB7F-4A08-8024-B577A10F6121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C217084F-FB7F-4A08-8024-B577A10F6121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C217084F-FB7F-4A08-8024-B577A10F6121}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +128,7 @@ Global
 		{34C6C3AC-D345-4F2D-B6F8-E13D94F1F203} = {E4B98438-A0AD-462E-ADCD-7B54402E0AC0}
 		{A50E70E0-9A4D-4F56-A9E8-0ABAA5E7AC97} = {E4B98438-A0AD-462E-ADCD-7B54402E0AC0}
 		{C104D301-627D-4A08-AE18-87DA6724D599} = {CA4B82C4-220F-4F92-95F9-700FA2CD68A4}
+		{C217084F-FB7F-4A08-8024-B577A10F6121} = {CA4B82C4-220F-4F92-95F9-700FA2CD68A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1719BDCB-1D45-4C70-B982-A503936602EA}
