@@ -6,7 +6,7 @@ namespace DevInt.EventSamples
 {
     public class Stock
     {
-        public delegate void PriceChangeHandler(decimal oldPrice, decimal newPrice);
+        public delegate int PriceChangeHandler(decimal oldPrice, decimal newPrice);
         public event PriceChangeHandler PriceChanged;
         public event EventHandler<PriceEventArgs> PriceChanged2;
         string symbol;
@@ -28,9 +28,7 @@ namespace DevInt.EventSamples
                 if (price == value) return;
                 var oldValue = price;
                 price = value;
-                //if (PriceChanged != null)
-                //    PriceChanged(oldValue, price);
-                PriceChanged?.Invoke(oldValue, price);
+                int? result = PriceChanged?.Invoke(oldValue, price)?? 0;
                 OnPriceChanged(new PriceEventArgs(oldValue, price));
             }
         }

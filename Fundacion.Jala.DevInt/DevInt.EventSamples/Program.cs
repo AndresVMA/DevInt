@@ -22,12 +22,13 @@ namespace DevInt.EventSamples
             }
         }
 
-        private static void Stock_PriceChanged(decimal oldPrice, decimal newPrice)
+        private static int Stock_PriceChanged(decimal oldPrice, decimal newPrice)
         {
             if (newPrice > oldPrice)
             {
                 Console.WriteLine("Price has increased");
             }
+            return 0;
         }
     }
 }
